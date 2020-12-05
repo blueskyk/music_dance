@@ -1,0 +1,1 @@
+<view class="listLeft"><view class="author">{{''+item.author+''}}</view><view class="title">{{''+item.title+''}}</view><view class="music-box"><view class="music">鸡你太美sdas dsadsa dasdas d  asd</view></view></view>
