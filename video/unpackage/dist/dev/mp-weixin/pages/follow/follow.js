@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var followTop = function followTop() {__webpack_require__.e(/*! require.ensure | components/followTop */ "components/followTop").then((function () {return resolve(__webpack_require__(/*! ../../components/followTop.vue */ 65));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 44));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var followList = function followList() {__webpack_require__.e(/*! require.ensure | components/followList */ "components/followList").then((function () {return resolve(__webpack_require__(/*! ../../components/followList.vue */ 72));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var followTop = function followTop() {__webpack_require__.e(/*! require.ensure | components/followTop */ "components/followTop").then((function () {return resolve(__webpack_require__(/*! ../../components/followTop.vue */ 73));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var followList = function followList() {__webpack_require__.e(/*! require.ensure | components/followList */ "components/followList").then((function () {return resolve(__webpack_require__(/*! ../../components/followList.vue */ 80));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -144,8 +144,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   data: function data() {
-    return {};
-
+    return {
+      page: "follow",
+      list: [] };
 
   },
   components: {
@@ -153,7 +154,18 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     tab: tab,
     followList: followList },
 
-  methods: {} };exports.default = _default;
+  methods: {
+    getList: function getList() {var _this = this;
+      this.request({
+        url: "http://192.168.1.104:4000/videos.json" }).
+      then(function (res) {
+        _this.list = res.data.list.slice(0, 4);
+      });
+    } },
+
+  created: function created() {
+    this.getList();
+  } };exports.default = _default;
 
 /***/ }),
 

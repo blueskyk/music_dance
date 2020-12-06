@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/follow/follow",
     "pages/city/city",
-    "pages/chooseCity/chooseCity"
+    "pages/chooseCity/chooseCity",
+    "pages/friend/friend"
   ],
   "subPackages": [],
   "window": {
@@ -20,9 +21,11 @@
       },
       {
         "pagePath": "pages/follow/follow"
+      },
+      {
+        "pagePath": "pages/friend/friend"
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap18.json"
+  "usingComponents": {}
 }

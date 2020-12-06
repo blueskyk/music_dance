@@ -3,8 +3,8 @@
 		<view class="followNav">
 			<view class="iconfont icon-xiangji"><text style="margin-left: 10rpx;">随手拍</text></view>
 			<view class="middle">
-				<navigator open-type="switchTab" url="/pages/index/index" class="text">关注</navigator>
-				<navigator open-type="navigate" url="/pages/city/city" class="text">好友</navigator>
+				<navigator :style="follow" open-type="switchTab" url="/pages/follow/follow" class="text">关注</navigator>
+				<navigator :style="friend" open-type="switchTab" url="/pages/friend/friend" class="text">好友</navigator>
 			</view>
 		</view>
 		<view class="fit"></view>
@@ -15,8 +15,21 @@
 	export default {
 		data() {
 			return {
-				
+				follow: "",
+				friend: ""
 			};
+		},
+		props:{
+			page: {
+				type: String
+			}
+		},
+		mounted() {
+			if(this.page === "follow") {
+				this.follow = "border-bottom: 2rpx solid #DD524D;"
+			} else {
+				this.friend = "border-bottom: 2rpx solid #DD524D;"
+			}
 		}
 	}
 </script>

@@ -1,0 +1,1 @@
+<view><follow-top vue-id="57cbc1c0-1" page="{{page}}" bind:__l="__l"></follow-top><follow-list vue-id="57cbc1c0-2" list="{{list}}" bind:__l="__l"></follow-list><tab vue-id="57cbc1c0-3" bind:__l="__l"></tab></view>

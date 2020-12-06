@@ -13,7 +13,7 @@
 	export default {
 		data() {
 			return {
-				page: "follow",
+				page: "friend",
 				list: []
 			}
 		},
@@ -27,7 +27,7 @@
 				this.request({
 					url: "http://192.168.1.104:4000/videos.json"
 				}).then(res => {
-					this.list = res.data.list.slice(0,4)
+					this.list = res.data.list.slice(3,8)
 				})
 			}
 		},
@@ -37,10 +37,10 @@
 	}
 </script>
 
-<style>
-page {
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-}
+<style lang="scss">
+ page {
+	 width: 100%;
+	 height: 100%;
+	 background-color: #000;
+ }
 </style>
