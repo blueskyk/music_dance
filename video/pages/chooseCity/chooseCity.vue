@@ -25,7 +25,7 @@
 		methods: {
 			getCityList() {
 				this.request({
-					url: "http://192.168.1.103:4000/city.json"
+					url: "http://192.168.1.104:4000/city.json"
 				}).then(res => {
 					this.citys  = res.data.city
 				})

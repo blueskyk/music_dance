@@ -16,13 +16,75 @@
 				我是标题
 			</view>
 			<view class="video-box">
-				<video objectFit="cover" src="http://192.168.1.105:4000/video/3-1.mp4" controls></video>
+				<video objectFit="cover" src="http://192.168.1.104:4000/video/3-1.mp4" :controls="false"></video>
+				<view class="music-box">
+					<view class="music">
+						didididididididididididididididi
+					</view>
+				</view>
 			</view>
 			<view class="share_box">
-
+				<view class="date">
+					03-11
+				</view>
+				<view class="share-items">
+					<view class="item iconfont icon-zhuanfa"><text>分享</text></view>
+					<view class="item iconfont icon-pinglun"><text>评论</text></view>
+					<view class="item iconfont icon-aixin"><text>点赞</text></view>
+				</view>
 			</view>
 			<view class="comment">
-
+				<view class="number">
+				11.7w评论过
+				</view>
+				<view class="comment_box">
+					<view class="iconfont icon-pen"></view>
+					<input type="text" placeholder="添加评论...">
+				</view>
+			</view>
+		</view>
+		
+		<view class="item">
+			<view class="top">
+				<view class="author-box">
+					<view class="author-img">
+						<image src="../static/imgs/author-icon.jpg" mode=""></image>
+					</view>
+					<view class="author-name">
+						张三
+					</view>
+				</view>
+				<view class="share iconfont icon-gengduo"></view>
+			</view>
+			<view class="title">
+				我是标题
+			</view>
+			<view class="video-box">
+				<video objectFit="cover" src="http://192.168.1.104:4000/video/3-1.mp4" :controls="false"></video>
+				<view class="music-box">
+					<view class="music">
+						didididididididididididididididi
+					</view>
+				</view>
+			</view>
+			<view class="share_box">
+				<view class="date">
+					03-11
+				</view>
+				<view class="share-items">
+					<view class="item iconfont icon-zhuanfa"><text>分享</text></view>
+					<view class="item iconfont icon-pinglun"><text>评论</text></view>
+					<view class="item iconfont icon-aixin"><text>点赞</text></view>
+				</view>
+			</view>
+			<view class="comment">
+				<view class="number">
+				11.7w评论过
+				</view>
+				<view class="comment_box">
+					<view class="iconfont icon-pen"></view>
+					<input type="text" placeholder="添加评论...">
+				</view>
 			</view>
 		</view>
 	</view>
@@ -57,6 +119,7 @@
 				.author-box {
 					display: flex;
 					align-items: center;
+
 					.author-img {
 						width: 70rpx;
 						height: 70rpx;
@@ -68,31 +131,105 @@
 							height: 100%;
 						}
 					}
+
 					.author-name {
 						margin-left: 20rpx;
 					}
 
 				}
+
 				.share {
 					font-size: 60rpx;
 				}
 			}
+
 			.title {
 				width: 100%;
 				font-size: 30rpx;
 				margin-top: 30rpx;
 				height: 50rpx;
 				line-height: 50rpx;
-				
+
 			}
+
 			.video-box {
 				width: 100%;
 				height: 700rpx;
+				position: relative;
+				
+
 				video {
 					width: 80%;
 					height: 100%;
 				}
+				.music-box {
+					position:absolute;
+					left: 0rpx;
+					bottom:  10rpx;
+					width: 40%;
+					height: 40rpx;
+					background-color: pink;
+					overflow: hidden;
+					.music {
+						margin-left: 10rpx;
+						color: #FFFFFF;
+						font-size: 30rpx;
+						width: 100%;
+						animation: music 4s linear infinite;
+					}
+				}
 			}
+
+			.share_box {
+				margin-top: 30rpx;
+				display: flex;
+				justify-content: space-between;
+
+				.date {
+					display: flex;
+					align-items: center;
+				}
+
+				.share-items {
+					display: flex;
+					align-items: center;
+
+					.item {
+						display: flex;
+						align-items: center;
+						margin-bottom: 20rpx;
+						text {
+							margin-left: 10rpx;
+						}
+					}
+				}
+			}
+			.comment {
+				width: 100%;
+				.number {
+					margin: 40rpx 0;
+					width: 100%;
+					height: 50rpx;
+				}
+				.comment_box {
+					display: flex;
+					align-items: center;
+					input {
+						width: 100%;
+						margin-left: 20rpx;
+						color: rgba(255,255,255,.6);
+					}
+				}
+			}
+		}
+	}
+	
+	@keyframes music {
+		0%{
+			transform: translate3d(80%,0,0);
+		}
+		100% {
+			transform: translate3d(-80%,0,0);
 		}
 	}
 </style>
