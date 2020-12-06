@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "message-top": "/components/messageTop",
+    "tab": "/components/tab"
+  }
+}

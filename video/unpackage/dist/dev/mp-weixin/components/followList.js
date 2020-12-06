@@ -182,7 +182,7 @@ var _default =
 
 
   mounted: function mounted() {
-    console.log(this.list);
+
   } };exports.default = _default;
 
 /***/ }),

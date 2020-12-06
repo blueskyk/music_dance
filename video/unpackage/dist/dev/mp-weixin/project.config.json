@@ -11,22 +11,32 @@
   "libVersion": "",
   "appid": "wx7de054ecd0fe14ef",
   "projectname": "video",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
+    "plugin": {
       "list": []
     },
     "game": {
-      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "current": -1,
-      "list": []
+      "list": [
+        {
+          "name": "pages/follow/follow",
+          "pathName": "pages/follow/follow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息页面",
+          "pathName": "pages/message/message",
+          "scene": null
+        }
+      ]
     }
   }
 }

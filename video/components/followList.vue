@@ -1,50 +1,50 @@
 <template>
 	<view class="followList">
-		<scroll-view style="height: 100%;" scroll-y="true" @scroll="scroll">
-			<view class="item" v-for="item in list" :key="item.id">
-				<view class="top">
-					<view class="author-box">
-						<view class="author-img">
-							<image src="../static/imgs/author-icon.jpg"></image>
+			<scroll-view style="height: 100%;" scroll-y="true" @scroll="scroll">
+				<view class="item" v-for="item in list" :key="item.id">
+					<view class="top">
+						<view class="author-box">
+							<view class="author-img">
+								<image src="../static/imgs/author-icon.jpg"></image>
+							</view>
+							<view class="author-name">
+								{{item.author}}
+							</view>
 						</view>
-						<view class="author-name">
-							{{item.author}}
+						<view class="share iconfont icon-gengduo"></view>
+					</view>
+					<view class="title">
+						{{item.title}}
+					</view>
+					<view class="video-box">
+						<video objectFit="cover" :src="`http://192.168.1.104:4000/video/${item.src}`" :controls="false"></video>
+						<view class="music-box">
+							<view class="music">
+								didididididididididididididididi
+							</view>
 						</view>
 					</view>
-					<view class="share iconfont icon-gengduo"></view>
-				</view>
-				<view class="title">
-					{{item.title}}
-				</view>
-				<view class="video-box">
-					<video objectFit="cover" :src="`http://192.168.1.104:4000/video/${item.src}`" :controls="false"></video>
-					<view class="music-box">
-						<view class="music">
-							didididididididididididididididi
+					<view class="share_box">
+						<view class="date">
+							03-11
+						</view>
+						<view class="share-items">
+							<view class="item iconfont icon-zhuanfa"><text>分享</text></view>
+							<view class="item iconfont icon-pinglun"><text>评论</text></view>
+							<view class="item iconfont icon-aixin"><text>点赞</text></view>
+						</view>
+					</view>
+					<view class="comment">
+						<view class="number">
+							11.7w评论过
+						</view>
+						<view class="comment_box">
+							<view class="iconfont icon-pen"></view>
+							<input type="text" placeholder="添加评论...">
 						</view>
 					</view>
 				</view>
-				<view class="share_box">
-					<view class="date">
-						03-11
-					</view>
-					<view class="share-items">
-						<view class="item iconfont icon-zhuanfa"><text>分享</text></view>
-						<view class="item iconfont icon-pinglun"><text>评论</text></view>
-						<view class="item iconfont icon-aixin"><text>点赞</text></view>
-					</view>
-				</view>
-				<view class="comment">
-					<view class="number">
-						11.7w评论过
-					</view>
-					<view class="comment_box">
-						<view class="iconfont icon-pen"></view>
-						<input type="text" placeholder="添加评论...">
-					</view>
-				</view>
-			</view>
-		</scroll-view>
+			</scroll-view>
 	</view>
 </template>
 
@@ -66,12 +66,16 @@
 			}
 		},
 		mounted() {
-			console.log(this.list)
+			
 		}
 	}
 </script>
 
 <style lang="scss">
+	page {
+		width: 100%;
+		height: 100%;
+	}
 	.followList {
 		width: 100%;
 		height: 100%;
@@ -80,6 +84,7 @@
 		color: #fff;
 
 		.item {
+			height: 75vh;
 			padding: 0 30rpx;
 
 			.top {
@@ -154,13 +159,9 @@
 			}
 
 			.share_box {
-				margin-top: 30rpx;
-				display: flex;
-				justify-content: space-between;
-
+				
 				.date {
-					display: flex;
-					align-items: center;
+				
 				}
 
 				.share-items {
@@ -168,7 +169,6 @@
 					align-items: center;
 
 					.item {
-						display: flex;
 						align-items: center;
 						margin-bottom: 20rpx;
 
@@ -185,7 +185,6 @@
 				.number {
 					margin: 40rpx 0;
 					width: 100%;
-					height: 50rpx;
 				}
 
 				.comment_box {

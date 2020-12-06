@@ -4,7 +4,8 @@
     "pages/follow/follow",
     "pages/city/city",
     "pages/chooseCity/chooseCity",
-    "pages/friend/friend"
+    "pages/friend/friend",
+    "pages/message/message"
   ],
   "subPackages": [],
   "window": {
@@ -24,6 +25,9 @@
       },
       {
         "pagePath": "pages/friend/friend"
+      },
+      {
+        "pagePath": "pages/message/message"
       }
     ]
   },

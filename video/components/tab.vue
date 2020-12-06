@@ -11,9 +11,9 @@
 			</view>
 		</view>
 	
-		<view class="tab-box">
+		<navigator open-type="switchTab" url="/pages/message/message" class="tab-box">
 			消息
-		</view>
+		</navigator>
 		<view class="tab-box">
 			我的
 		</view>
@@ -39,6 +39,7 @@
 	width: 100%;
 	height: 100rpx;
 	z-index: 20;
+	color: #fff;
 	.tab-box {
 		flex: 1;
 		display: flex;

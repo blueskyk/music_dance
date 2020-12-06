@@ -36,6 +36,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/message/message",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -53,6 +62,9 @@
 			},
 			{
 				"pagePath": "pages/friend/friend"
+			},
+			{
+				"pagePath": "pages/message/message"
 			}
 		]
 	}
