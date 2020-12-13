@@ -27,7 +27,7 @@
 		methods: {
 			getVideoList() {
 			 this.request({
-				 url: "http://192.168.1.104:4000/videos.json"
+				 url: "http://192.168.1.102:4000/videos.json"
 			 }).then(res => {
 				 this.list = res.data.list
 			 })

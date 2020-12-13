@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var changeHeader = function changeHeader() {__webpack_require__.e(/*! require.ensure | components/changeHeader */ "components/changeHeader").then((function () {return resolve(__webpack_require__(/*! ../../components/changeHeader.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var cityList = function cityList() {__webpack_require__.e(/*! require.ensure | components/cityList */ "components/cityList").then((function () {return resolve(__webpack_require__(/*! ../../components/cityList.vue */ 101));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var letterList = function letterList() {__webpack_require__.e(/*! require.ensure | components/letterList */ "components/letterList").then((function () {return resolve(__webpack_require__(/*! ../../components/letterList.vue */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var changeHeader = function changeHeader() {__webpack_require__.e(/*! require.ensure | components/changeHeader */ "components/changeHeader").then((function () {return resolve(__webpack_require__(/*! ../../components/changeHeader.vue */ 102));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var cityList = function cityList() {__webpack_require__.e(/*! require.ensure | components/cityList */ "components/cityList").then((function () {return resolve(__webpack_require__(/*! ../../components/cityList.vue */ 109));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var letterList = function letterList() {__webpack_require__.e(/*! require.ensure | components/letterList */ "components/letterList").then((function () {return resolve(__webpack_require__(/*! ../../components/letterList.vue */ 116));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -157,7 +157,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   methods: {
     getCityList: function getCityList() {var _this = this;
       this.request({
-        url: "http://192.168.1.104:4000/city.json" }).
+        url: "http://192.168.0.104:4000/city.json" }).
       then(function (res) {
         _this.citys = res.data.city;
       });

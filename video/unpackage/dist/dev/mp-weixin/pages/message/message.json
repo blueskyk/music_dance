@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "message-top": "/components/messageTop",
+    "message-content": "/components/messageContent",
     "tab": "/components/tab"
   }
 }

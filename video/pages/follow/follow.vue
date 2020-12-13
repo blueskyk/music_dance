@@ -25,7 +25,7 @@
 		methods: {
 			getList() {
 				this.request({
-					url: "http://192.168.1.104:4000/videos.json"
+					url: "http://192.168.0.104:4000/videos.json"
 				}).then(res => {
 					this.list = res.data.list.slice(0,4)
 				})

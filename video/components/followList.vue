@@ -17,7 +17,7 @@
 						{{item.title}}
 					</view>
 					<view class="video-box">
-						<video objectFit="cover" :src="`http://192.168.1.104:4000/video/${item.src}`" :controls="false"></video>
+						<video objectFit="cover" :src="`http://192.168.0.104:4000/video/${item.src}`" :controls="false"></video>
 						<view class="music-box">
 							<view class="music">
 								didididididididididididididididi

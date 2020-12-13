@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 52));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var topNav = function topNav() {__webpack_require__.e(/*! require.ensure | components/topNav */ "components/topNav").then((function () {return resolve(__webpack_require__(/*! ../../components/topNav.vue */ 59));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var videoList = function videoList() {__webpack_require__.e(/*! require.ensure | components/videoList */ "components/videoList").then((function () {return resolve(__webpack_require__(/*! ../../components/videoList.vue */ 66));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 60));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var topNav = function topNav() {__webpack_require__.e(/*! require.ensure | components/topNav */ "components/topNav").then((function () {return resolve(__webpack_require__(/*! ../../components/topNav.vue */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var videoList = function videoList() {__webpack_require__.e(/*! require.ensure | components/videoList */ "components/videoList").then((function () {return resolve(__webpack_require__(/*! ../../components/videoList.vue */ 74));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -165,7 +165,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   methods: {
     getVideoList: function getVideoList() {var _this = this;
       this.request({
-        url: "http://192.168.1.104:4000/videos.json" }).
+        url: "http://192.168.1.102:4000/videos.json" }).
       then(function (res) {
         _this.list = res.data.list;
       });

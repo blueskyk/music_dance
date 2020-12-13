@@ -13,7 +13,7 @@
 		<view class="video-list">
 			<view class="item">
 				<view class="video-wrap">
-					<video src="http://192.168.1.104:4000/video/1-1.mp4"></video>
+					<video src="http://192.168.0.104:4000/video/1-1.mp4"></video>
 				</view>
 				<view class="img-wrap">
 					<image src="../static/imgs/author-icon.jpg"></image>
@@ -22,7 +22,7 @@
 
 			<view class="item">
 				<view class="video-wrap">
-					<video src="http://192.168.1.104:4000/video/1-1.mp4"></video>
+					<video src="http://192.168.0.104:4000/video/1-1.mp4"></video>
 				</view>
 				<view class="img-wrap">
 					<image src="../static/imgs/author-icon.jpg"></image>
@@ -30,7 +30,7 @@
 			</view>
 			<view class="item">
 				<view class="video-wrap">
-					<video src="http://192.168.1.104:4000/video/1-1.mp4"></video>
+					<video src="http://192.168.0.104:4000/video/1-1.mp4"></video>
 				</view>
 				<view class="img-wrap">
 					<image src="../static/imgs/author-icon.jpg"></image>
@@ -39,7 +39,7 @@
 
 			<view class="item">
 				<view class="video-wrap">
-					<video src="http://192.168.1.104:4000/video/1-1.mp4"></video>
+					<video src="http://192.168.0.104:4000/video/1-1.mp4"></video>
 				</view>
 				<view class="img-wrap">
 					<image src="../static/imgs/author-icon.jpg"></image>

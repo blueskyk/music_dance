@@ -1,6 +1,6 @@
 <template>
 	<view class="videoplayer">
-		<video :controls="false" :autoplay="autoplay" @click="played" loop id="myVideo"  objectFit="cover" :src="`http://192.168.1.104:4000/video/${video.src}`"></video>
+		<video :controls="false" :autoplay="autoplay" @click="played" loop id="myVideo"  objectFit="cover" :src="`http://192.168.0.104:4000/video/${video.src}`"></video>
 	</view>
 </template>
 

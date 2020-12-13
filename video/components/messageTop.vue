@@ -1,6 +1,9 @@
 <template>
-	<view class="message-top">
-		<view class="message">消息</view>
+	<view>
+		<view class="message-top">
+			<view class="message">消息</view>
+		</view>
+		<view class="fit"></view>
 	</view>
 </template>
 
@@ -30,5 +33,10 @@
 		font-size: 30rpx;
 		color: #fff;
 	}
+}
+
+.fit {
+	width: 100%;
+	height: 160rpx;
 }
 </style>
