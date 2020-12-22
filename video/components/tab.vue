@@ -10,13 +10,12 @@
 			<view class="iconfont icon-jiahao icon-box">
 			</view>
 		</view>
-	
 		<navigator open-type="switchTab" url="/pages/message/message" class="tab-box">
 			消息
 		</navigator>
-		<view class="tab-box">
+		<navigator open-type="switchTab" url="/pages/user/user" class="tab-box">
 			我的
-		</view>
+		</navigator>
 	</view>
 </template>
 

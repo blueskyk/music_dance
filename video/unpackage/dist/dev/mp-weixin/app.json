@@ -5,7 +5,8 @@
     "pages/city/city",
     "pages/chooseCity/chooseCity",
     "pages/friend/friend",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/user/user"
   ],
   "subPackages": [],
   "window": {
@@ -28,9 +29,12 @@
       },
       {
         "pagePath": "pages/message/message"
+      },
+      {
+        "pagePath": "pages/user/user"
       }
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap11.json"
+  "sitemapLocation": "sitemap64.json"
 }

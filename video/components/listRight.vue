@@ -64,7 +64,6 @@
 		margin: 0 auto;
 		.right-box {
 			width: 100rpx;
-			height: 100rpx;
 			margin-top: 26rpx;
 			text-align: center;
 			color: #fff;

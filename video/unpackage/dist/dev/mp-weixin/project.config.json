@@ -26,8 +26,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/message/message",
-          "pathName": "pages/message/message",
+          "name": "关注页面",
+          "pathName": "pages/follow/follow",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
           "scene": null
         }
       ]

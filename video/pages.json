@@ -45,6 +45,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -65,6 +74,9 @@
 			},
 			{
 				"pagePath": "pages/message/message"
+			},
+			{
+				"pagePath": "pages/user/user"
 			}
 		]
 	}

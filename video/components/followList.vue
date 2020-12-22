@@ -1,6 +1,6 @@
 <template>
 	<view class="followList">
-			<scroll-view style="height: 100%;" scroll-y="true" @scroll="scroll">
+			<scroll-view style="height: 90vh;" scroll-y="true" @scroll="scroll">
 				<view class="item" v-for="item in list" :key="item.id">
 					<view class="top">
 						<view class="author-box">
@@ -17,30 +17,28 @@
 						{{item.title}}
 					</view>
 					<view class="video-box">
-						<video objectFit="cover" :src="`http://192.168.0.104:4000/video/${item.src}`" :controls="false"></video>
+						<video objectFit="cover" :loop="true" :src="`http://192.168.0.103:4000/video/${item.src}`" :controls="false"></video>
 						<view class="music-box">
 							<view class="music">
 								didididididididididididididididi
 							</view>
 						</view>
 					</view>
-					<view class="share_box">
-						<view class="date">
-							03-11
-						</view>
-						<view class="share-items">
-							<view class="item iconfont icon-zhuanfa"><text>分享</text></view>
-							<view class="item iconfont icon-pinglun"><text>评论</text></view>
-							<view class="item iconfont icon-aixin"><text>点赞</text></view>
+					<view class="box">
+						<view class="date">11-7</view>
+						<view class="share-box">
+							<view class="iconfont icon-zhuanfa">分享</view>
+							<view class="iconfont icon-pinglun">评论</view>
+							<view class="iconfont icon-aixin">赞</view>
 						</view>
 					</view>
-					<view class="comment">
+					<view class="comment-box">
 						<view class="number">
-							11.7w评论过
+							11.7w已观看
 						</view>
-						<view class="comment_box">
+						<view class="comment">
 							<view class="iconfont icon-pen"></view>
-							<input type="text" placeholder="添加评论...">
+							<input type="text" placeholder="添加评论..." />
 						</view>
 					</view>
 				</view>
@@ -52,12 +50,16 @@
 	export default {
 		data() {
 			return {
-
+				
 			};
+		},
+		components: {
+			
 		},
 		methods:{
 			scroll(res) {
-				console.log(res)
+				const index = Math.floor((res.detail.scrollTop + 150)/550);
+				console.log(index)
 			}
 		},
 		props: {
@@ -74,7 +76,7 @@
 <style lang="scss">
 	page {
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 	}
 	.followList {
 		width: 100%;
@@ -84,9 +86,8 @@
 		color: #fff;
 
 		.item {
-			height: 75vh;
-			padding: 0 30rpx;
-
+			height: 100%;
+			padding: 0rpx 30rpx;
 			.top {
 				display: flex;
 				justify-content: space-between;
@@ -157,45 +158,34 @@
 					}
 				}
 			}
-
-			.share_box {
-				
+			.box {
+				display: flex;
+				justify-content: space-between;
+				margin: 40rpx 0;
 				.date {
-				
+					color: #ccc;
+					font-size: 36rpx;
 				}
-
-				.share-items {
+				.share-box {
 					display: flex;
 					align-items: center;
-
-					.item {
-						align-items: center;
-						margin-bottom: 20rpx;
-
-						text {
-							margin-left: 10rpx;
-						}
+					.iconfont {
+						margin: 0 10rpx;
+						font-size: 30rpx;
 					}
 				}
 			}
-
-			.comment {
-				width: 100%;
-
+			.comment-box {
 				.number {
-					margin: 40rpx 0;
-					width: 100%;
+					margin: 30rpx 0;
 				}
-
-				.comment_box {
+				.comment {
 					display: flex;
 					align-items: center;
-
 					input {
-						width: 100%;
-						margin-left: 20rpx;
-						color: rgba(255, 255, 255, .6);
+						margin-left: 30rpx;
 					}
+					
 				}
 			}
 		}

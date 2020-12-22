@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "tab": "/components/tab",
+    "user-bg": "/components/userBG",
+    "option-video": "/components/optionVideo"
+  }
+}
