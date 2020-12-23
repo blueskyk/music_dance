@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -188,10 +188,37 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      style1: "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;",
+      style2: '',
+      style3: '' };
 
+  },
+  methods: {
+    change: function change(name) {
+      if (name === '作品') {
+        this.style1 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;";
+        this.style2 = '';
+        this.style3 = '';
+        this.$emit('change', name);
+      } else if (name === '动态') {
+        this.style2 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;";
+        this.style1 = '';
+        this.style3 = '';
+        this.$emit('change', name);
+      } else {
+        this.style3 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;";
+        this.style1 = '';
+        this.style2 = '';
+        this.$emit('change', name);
+      }
+    },
+    changeUserInfo: function changeUserInfo() {
+      uni.navigateTo({
+        url: "/pages/changeUserInfo/changeUserInfo" });
 
-  } };exports.default = _default;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

@@ -8,7 +8,7 @@
 				<image src="../static/imgs/author-icon.jpg" mode=""></image>
 			</view>
 			<view class="edit-box">
-				<navigator class="edit">编辑资料</navigator>
+				<view class="edit" @click="changeUserInfo">编辑资料</view>
 				<view class="add"><text class="iconfont icon-tianjiayonghu"></text></view>
 			</view>
 		</view>
@@ -56,14 +56,14 @@
 			</view>
 		</view>
 		<view class="option-box">
-			<view class="option-item">
-				作品
+			<view :style="style1" @click="change('作品')" class="option-item">
+				<text >作品</text>
 			</view>
-			<view class="option-item">
-				动态
+			<view :style="style2" @click="change('动态')" class="option-item">
+				<text>动态</text>
 			</view>
-			<view class="option-item">
-				喜欢
+			<view :style="style3" @click="change('喜欢')" class="option-item">
+				<text>喜欢</text>
 			</view>
 		</view>
 	</view>
@@ -73,8 +73,35 @@
 	export default {
 		data() {
 			return {
-
+			style1: "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;",
+			style2: '',
+			style3: ''
 			};
+		},
+		methods: {
+			change(name) {
+				if(name === '作品') {
+					this.style1 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;"
+					this.style2 = ''
+					this.style3 = ''
+					this.$emit('change',name)
+				} else if (name === '动态') {
+					this.style2 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;"
+					this.style1 = ''
+					this.style3 = ''
+					this.$emit('change',name)
+				} else {
+					this.style3 = "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;"
+					this.style1 = ''
+					this.style2 = ''
+					this.$emit('change',name)
+				}
+			},
+			changeUserInfo() {
+				uni.navigateTo({
+					url:"/pages/changeUserInfo/changeUserInfo"
+				})
+			}
 		}
 	}
 </script>

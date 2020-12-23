@@ -1,1 +1,0 @@
-<view><video objectFit="cover" loop="{{true}}" src="{{'http://192.168.0.103:4000/video/'+item.src}}" controls="{{false}}"></video></view>

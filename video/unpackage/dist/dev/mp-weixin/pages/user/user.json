@@ -4,6 +4,7 @@
   "usingComponents": {
     "tab": "/components/tab",
     "user-bg": "/components/userBG",
-    "option-video": "/components/optionVideo"
+    "option-video": "/components/optionVideo",
+    "follow-list": "/components/followList"
   }
 }

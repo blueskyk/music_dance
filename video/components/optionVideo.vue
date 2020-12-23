@@ -6,24 +6,6 @@
 				11.7w
 			</view>
 		</view>
-		<view class="item">
-			<video objectFit="cover" :loop="true" src="http://192.168.0.103:4000/video/1-1.mp4" :controls="false"></video>
-			<view class="iconfont icon-aixin">
-				11.7w
-			</view>
-		</view>
-		<view class="item">
-			<video objectFit="cover" :loop="true" src="http://192.168.0.103:4000/video/1-1.mp4" :controls="false"></video>
-			<view class="iconfont icon-aixin">
-				11.7w
-			</view>
-		</view>
-		<view class="item">
-			<video objectFit="cover" :loop="true" src="http://192.168.0.103:4000/video/1-1.mp4" :controls="false"></video>
-			<view class="iconfont icon-aixin">
-				11.7w
-			</view>
-		</view>
 		<view class="ground"></view>
 		<view class="no-more">没有更多了</view>
 	</view>

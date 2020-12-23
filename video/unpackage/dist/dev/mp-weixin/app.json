@@ -6,7 +6,9 @@
     "pages/chooseCity/chooseCity",
     "pages/friend/friend",
     "pages/message/message",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/changeUserInfo/changeUserInfo",
+    "pages/changeName/changeName"
   ],
   "subPackages": [],
   "window": {
@@ -35,6 +37,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap64.json"
+  "usingComponents": {}
 }

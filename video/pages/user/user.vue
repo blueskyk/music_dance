@@ -1,7 +1,19 @@
 <template>
 	<view>
-		<user-bg></user-bg>
-		<option-video></option-video>
+		<user-bg @change="change"></user-bg>
+		<!-- 作品 -->
+		<view v-show="show === '作品'">
+			<option-video></option-video>
+		</view>
+		<!-- 动态 -->
+		<view v-show="show === '动态'">
+			<follow-list :list="list"></follow-list>
+		</view>
+		
+		<!-- 喜欢 -->
+		<view v-show="show === '喜欢'">
+			<option-video></option-video>
+		</view>
 		<tab></tab>
 	</view>
 </template>
@@ -10,19 +22,34 @@
 	import tab from "../../components/tab.vue"
 	import userBg from "../../components/userBG.vue"
 	import optionVideo from "../../components/optionVideo.vue"
+	import followList from "../../components/followList.vue"
 	export default {
 		data() {
 			return {
-
+				list: [],
+				show: '作品'
 			}
 		},
 		methods: {
-
+			getVideoList() {
+				this.request({
+					url: "http://192.168.0.103:4000/videos.json"
+				}).then(res => {
+					this.list = res.data.list
+				})
+			},
+			change(name) {
+				this.show = name
+			}
 		},
 		components: {
 			tab,
 			userBg,
-			optionVideo
+			optionVideo,
+			followList
+		},
+		created() {
+			this.getVideoList()
 		}
 	}
 </script>
