@@ -1,6 +1,6 @@
 <template>
 	<view class="listright">
-		<view class="author-img">
+		<view class="author-img" @click="toPersonal">
 			<view class="author-wrap">
 				<image src="../static/imgs/author-icon.jpg" mode="aspectFill"></image>
 			</view>
@@ -53,6 +53,11 @@
 			},
 			change() {
 				this.color = "color: red;"
+			},
+			toPersonal() {
+				uni.navigateTo({
+					url: "/pages/followUser/followUser"
+				})
 			}
 		}
 	}

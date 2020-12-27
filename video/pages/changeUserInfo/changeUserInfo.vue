@@ -7,58 +7,70 @@
 		<view class="user">
 			<view class="user-box">
 				<view class="user-img" @click="chooseImg">
-					<image :src="img" mode=""></image>
+					<image :src="img"></image>
 				</view>
 				<view class="change">点击修改头像</view>
 			</view>
 			<view class="item">
 				<view class="item-left">昵称</view>
-				<navigator open-type="redirect" url="../changeName/changeName" class="item-right">
+				<navigator open-type="redirect" url="../changeName/changeName?title=userName" class="item-right">
 					<view class="right-text">{{user.userName}}</view>
 					<view class="iconfont icon-iconfontjiantou5"></view>
 				</navigator>
 			</view>
 			<view class="item">
 				<view class="item-left">抖音号</view>
-				<view class="item-right">
-					<view class="right-text">111111</view>
+				<navigator open-type="redirect" url="../changeName/changeName?title=douId" class="item-right">
+					<view class="right-text">{{user.userId}}</view>
 					<view class="iconfont icon-iconfontjiantou5"></view>
-				</view>
+				</navigator>
 			</view>
 			<view class="item">
 				<view class="item-left">简介</view>
-				<view class="item-right">
-					<view class="right-text">我爱写代码</view>
+				<navigator open-type="redirect" url="../changeName/changeName?title=intro" class="item-right">
+					<view class="right-text">{{user.userIntro}}</view>
 					<view class="iconfont icon-iconfontjiantou5"></view>
-				</view>
+				</navigator>
 			</view>
-			<view class="item">
-				<view class="item-left">学校</view>
-				<view class="item-right">
-					<view class="iconfont icon-iconfontjiantou5"></view>
+			<picker :range="school" @change="changeSchool">
+				<view class="item">
+
+					<view class="item-left">学校</view>
+					<view class="item-right">
+						<view class="right-text">{{user.school}}</view>
+						<view class="iconfont icon-iconfontjiantou5"></view>
+					</view>
+
 				</view>
-			</view>
-			<view class="item">
-				<view class="item-left">性别</view>
-				<view class="item-right">
-					<view class="right-text">点击选择性别</view>
-					<view class="iconfont icon-iconfontjiantou5"></view>
+			</picker>
+
+			<picker :range="sex" @change="changeSex">
+				<view class="item">
+					<view class="item-left">性别</view>
+					<view class="item-right">
+						<view class="right-text">{{user.sex}}</view>
+						<view class="iconfont icon-iconfontjiantou5"></view>
+					</view>
 				</view>
-			</view>
-			<view class="item">
-				<view class="item-left">生日</view>
-				<view class="item-right">
-					<view class="right-text">2000-11-07</view>
-					<view class="iconfont icon-iconfontjiantou5"></view>
+			</picker>
+			<picker mode="date" :value="birthday" @change="changeBirthday">
+				<view class="item">
+					<view class="item-left">生日</view>
+					<view class="item-right">
+						<view class="right-text">{{user.birthday}}</view>
+						<view class="iconfont icon-iconfontjiantou5"></view>
+					</view>
 				</view>
-			</view>
-			<view class="item">
-				<view class="item-left">地区</view>
-				<view class="item-right">
-					<view class="right-text">江苏省徐州市</view>
-					<view class="iconfont icon-iconfontjiantou5"></view>
+			</picker>
+			<picker mode="region"  @change="changeCity">
+				<view class="item">
+					<view class="item-left">地区</view>
+					<view class="item-right">
+						<view class="right-text">{{user.city}}</view>
+						<view class="iconfont icon-iconfontjiantou5"></view>
+					</view>
 				</view>
-			</view>
+			</picker>
 		</view>
 	</view>
 </template>
@@ -69,8 +81,16 @@
 			return {
 				img: "../../static/imgs/author-icon.jpg",
 				user: {
-					userName: '滴滴'
-				}
+					userName: '滴滴',
+					userId: "11111111",
+					userIntro: "我爱写代码",
+					school: "",
+					sex: "请选择性别",
+					birthday: "",
+					city: ""
+				},
+				school: ["清华大学", "北京大学", "复旦大学", "南京大学", "浙江大学", "武汉大学"],
+				sex: ["男", "女"]
 			}
 		},
 		methods: {
@@ -79,6 +99,7 @@
 					delta: 1
 				})
 			},
+			// 修改头像
 			chooseImg(res) {
 				uni.chooseImage({
 					count: 1,
@@ -88,15 +109,92 @@
 						this.img = res.tempFilePaths
 					}
 				})
+			},
+			// 修改学校
+			changeSchool(e) {
+				this.user.school = this.school[e.target.value]
+				uni.setStorage({
+					key: "school",
+					data: this.school[e.target.value]
+				})
+			},
+			// 修改性别
+			changeSex(e) {
+				this.user.sex = this.sex[e.target.value]
+				uni.setStorage({
+					key: "sex",
+					data: this.user.sex = this.sex[e.target.value]
+				})
+			},
+			// 修改生日
+			changeBirthday(e) {
+				this.user.birthday = e.target.value,
+					uni.setStorage({
+						key: "birthday",
+						data: e.target.value
+					})
+			},
+			// 修改城市
+			changeCity(e) {
+				console.log(e)
+				const data = e.target.value[0]+"-" +e.target.value[1]+ "-" +e.target.value[2]
+				this.user.city = data
+				uni.setStorage({
+					key: "city",
+					data
+				})
 			}
 		},
 		onLoad() {
+			// 读取存储中的用户昵称
 			uni.getStorage({
-				key:'userName',
-				success: (res) => {
-					this.user.userName = res.data
-				}
-			})
+					key: 'userName',
+					success: (res) => {
+						this.user.userName = res.data
+					}
+				}),
+				// 读取存储中的抖音id
+				uni.getStorage({
+					key: "userId",
+					success: (res) => {
+						this.user.userId = res.data
+					}
+				}),
+				// 读取存储中的用户简介
+				uni.getStorage({
+					key: "userIntro",
+					success: (res) => {
+						this.user.userIntro = res.data
+					}
+				}),
+				// 读取存储中的用户学校信息
+				uni.getStorage({
+					key: "school",
+					success: (res) => {
+						this.user.school = res.data
+					}
+				}),
+				// 读取存储中的用户性别选项
+				uni.getStorage({
+					key: "sex",
+					success: (res) => {
+						this.user.sex = res.data
+					}
+				}),
+				// 读取存储中用户生日选项
+				uni.getStorage({
+					key: "birthday",
+					success: (res) => {
+						this.user.birthday = res.data
+					}
+				})
+				// 读取存储中用户所在的城市
+				uni.getStorage({
+					key: "city",
+					success: (res) => {
+						this.user.city = res.data
+					}
+				})
 		}
 	}
 </script>

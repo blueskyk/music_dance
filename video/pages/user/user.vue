@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<user-bg @change="change"></user-bg>
+		<user-bg :pages="pages" @change="change"></user-bg>
 		<!-- 作品 -->
 		<view v-show="show === '作品'">
 			<option-video></option-video>
@@ -27,7 +27,8 @@
 		data() {
 			return {
 				list: [],
-				show: '作品'
+				show: '作品',
+				pages: 'user'
 			}
 		},
 		methods: {

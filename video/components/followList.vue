@@ -17,7 +17,7 @@
 						{{item.title}}
 					</view>
 					<view class="video-box">
-						<video objectFit="cover" :loop="true" :src="`http://192.168.0.103:4000/video/${item.src}`" :controls="false"></video>
+						<video @click="goPlayer(list)" objectFit="cover" :loop="true" :src="`http://192.168.0.101:4000/video/${item.src}`" :controls="false"></video>
 						<view class="music-box">
 							<view class="music">
 								didididididididididididididididi
@@ -60,6 +60,15 @@
 			scroll(res) {
 				const index = Math.floor((res.detail.scrollTop + 150)/550);
 				console.log(index)
+			},
+			goPlayer(res) {
+				uni.setStorage({
+					key: "videoList",
+					data: res
+				})
+				uni.navigateTo({
+					url:"/pages/player/player"
+				})
 			}
 		},
 		props: {
@@ -88,6 +97,8 @@
 		.item {
 			height: 100%;
 			padding: 0rpx 30rpx;
+			position: relative;
+			
 			.top {
 				display: flex;
 				justify-content: space-between;
@@ -124,7 +135,7 @@
 			.title {
 				width: 100%;
 				font-size: 30rpx;
-				margin-top: 30rpx;
+				margin: 30rpx 0;
 				height: 50rpx;
 				line-height: 50rpx;
 

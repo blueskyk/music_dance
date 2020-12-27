@@ -38,6 +38,7 @@ page {
 .followList .item {
   height: 100%;
   padding: 0rpx 30rpx;
+  position: relative;
 }
 .followList .item .top {
   display: -webkit-box;
@@ -79,7 +80,7 @@ page {
 .followList .item .title {
   width: 100%;
   font-size: 30rpx;
-  margin-top: 30rpx;
+  margin: 30rpx 0;
   height: 50rpx;
   line-height: 50rpx;
 }

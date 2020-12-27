@@ -45,6 +45,7 @@ page {
 }
 .top .title {
   font-size: 30rpx;
+  color: #fff;
 }
 .name-box {
   padding: 0 30rpx;
@@ -77,14 +78,21 @@ page {
   color: #999;
   font-size: 24rpx;
 }
-.name-box .save {
+.name-box .user-input .save {
+  margin: 0 auto;
   margin-top: 40rpx;
   width: 90%;
   height: 80rpx;
   line-height: 80rpx;
   text-align: center;
-  background-color: #999;
+  background-color: #666;
   color: #fff;
   font-size: 30rpx;
+}
+.name-box .user-input textarea {
+  width: 98%;
+  margin: 0 auto;
+  background-color: #333;
+  color: #ccc;
 }
 

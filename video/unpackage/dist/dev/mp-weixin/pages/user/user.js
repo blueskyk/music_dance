@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 68));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var userBg = function userBg() {__webpack_require__.e(/*! require.ensure | components/userBG */ "components/userBG").then((function () {return resolve(__webpack_require__(/*! ../../components/userBG.vue */ 145));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var optionVideo = function optionVideo() {__webpack_require__.e(/*! require.ensure | components/optionVideo */ "components/optionVideo").then((function () {return resolve(__webpack_require__(/*! ../../components/optionVideo.vue */ 152));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var followList = function followList() {__webpack_require__.e(/*! require.ensure | components/followList */ "components/followList").then((function () {return resolve(__webpack_require__(/*! ../../components/followList.vue */ 96));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var tab = function tab() {__webpack_require__.e(/*! require.ensure | components/tab */ "components/tab").then((function () {return resolve(__webpack_require__(/*! ../../components/tab.vue */ 100));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var userBg = function userBg() {__webpack_require__.e(/*! require.ensure | components/userBG */ "components/userBG").then((function () {return resolve(__webpack_require__(/*! ../../components/userBG.vue */ 177));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var optionVideo = function optionVideo() {__webpack_require__.e(/*! require.ensure | components/optionVideo */ "components/optionVideo").then((function () {return resolve(__webpack_require__(/*! ../../components/optionVideo.vue */ 184));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var followList = function followList() {__webpack_require__.e(/*! require.ensure | components/followList */ "components/followList").then((function () {return resolve(__webpack_require__(/*! ../../components/followList.vue */ 128));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -159,7 +159,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       list: [],
-      show: '作品' };
+      show: '作品',
+      pages: 'user' };
 
   },
   methods: {

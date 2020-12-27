@@ -1,0 +1,1 @@
+<view class="player"><view class="back"><view data-event-opts="{{[['tap',[['back',['$event']]]]]}}" class="iconfont icon-fanhui" bindtap="__e"></view></view><video-list vue-id="02ed2720-1" list="{{list}}" bind:__l="__l"></video-list><view class="footer">留下你的精彩评论吧</view></view>

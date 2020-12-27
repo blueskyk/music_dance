@@ -68,14 +68,7 @@ page {
 .top .edit-box .edit {
   margin-right: 10rpx;
   font-size: 32rpx;
-  width: 400rpx;
-  height: 80rpx;
-  line-height: 80rpx;
-  text-align: center;
-  background-color: #3b3945;
-}
-.top .edit-box .add {
-  width: 70rpx;
+  width: 460rpx;
   height: 80rpx;
   line-height: 80rpx;
   text-align: center;

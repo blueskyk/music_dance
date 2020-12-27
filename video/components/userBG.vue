@@ -7,9 +7,14 @@
 			<view class="user-box">
 				<image src="../static/imgs/author-icon.jpg" mode=""></image>
 			</view>
-			<view class="edit-box">
+			<view v-if="pages === 'user'" class="edit-box">
 				<view class="edit" @click="changeUserInfo">编辑资料</view>
-				<view class="add"><text class="iconfont icon-tianjiayonghu"></text></view>
+			</view>
+			<view v-else class="edit-box">
+				<view :style="style4" @click="changeFollow"  class="edit">
+					<text style="margin-right: 10rpx;" v-show="follwText==='关注'" class="iconfont icon-jiahao"></text>
+				{{follwText}}
+				</view>
 			</view>
 		</view>
 		<view class="fit"></view>
@@ -75,8 +80,10 @@
 			return {
 			style1: "border-bottom: 3rpx solid #F0AD4E; padding-bottom:20rpx;",
 			style2: '',
-			style3: ''
-			};
+			style3: '',
+			style4: 'background-color: red;',
+			follwText: '关注'
+			}
 		},
 		methods: {
 			change(name) {
@@ -101,6 +108,16 @@
 				uni.navigateTo({
 					url:"/pages/changeUserInfo/changeUserInfo"
 				})
+			},
+			// 关注按钮的切换
+			changeFollow() {
+				this.style4 = this.style4 === ''? 'background-color: red;': ''
+				this.follwText = this.style4 === ''?"取消关注": "关注"
+			}
+		},
+		props: {
+			pages: {
+				type: String
 			}
 		}
 	}
@@ -146,15 +163,7 @@
 			.edit {
 				margin-right: 10rpx;
 				font-size: 32rpx;
-				width: 400rpx;
-				height: 80rpx;
-				line-height: 80rpx;
-				text-align: center;
-				background-color: #3b3945;
-			}
-
-			.add {
-				width: 70rpx;
+				width: 460rpx;
 				height: 80rpx;
 				line-height: 80rpx;
 				text-align: center;

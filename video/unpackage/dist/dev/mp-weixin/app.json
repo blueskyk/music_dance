@@ -8,7 +8,9 @@
     "pages/message/message",
     "pages/user/user",
     "pages/changeUserInfo/changeUserInfo",
-    "pages/changeName/changeName"
+    "pages/changeName/changeName",
+    "pages/player/player",
+    "pages/followUser/followUser"
   ],
   "subPackages": [],
   "window": {
